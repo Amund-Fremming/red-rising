@@ -7,23 +7,77 @@ export const galleryScreenStyles = StyleSheet.create({
     ...starryBackground,
   },
   header: {
+    paddingTop: 12,
     paddingHorizontal: 20,
   },
-  title: {
+  tabsBar: {
+    paddingTop: 16,
+    paddingBottom: 16,
+    paddingHorizontal: 20,
+  },
+  titleRow: {
     marginTop: 14,
+    height: 50,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  searchButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: colors.hairlineStrong,
+    backgroundColor: 'rgba(7,8,12,0.7)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  searchBar: {
+    ...StyleSheet.absoluteFill,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  cancel: {
+    height: 44,
+    justifyContent: 'center',
+  },
+  cancelLabel: {
+    fontFamily: fonts.body,
+    fontSize: 15,
+    color: colors.bone,
+  },
+  title: {
     fontFamily: fonts.display,
     fontSize: 46,
     lineHeight: 50,
     color: colors.bone,
   },
+  search: {
+    flex: 1,
+    height: 44,
+    paddingHorizontal: 16,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: colors.hairlineStrong,
+    backgroundColor: colors.ink,
+    fontFamily: fonts.body,
+    fontSize: 15,
+    color: colors.bone,
+  },
+  empty: {
+    fontFamily: fonts.italic,
+    fontSize: 14,
+    color: colors.muted,
+  },
   tabs: {
-    marginTop: 16,
     flexDirection: 'row',
     gap: 6,
     padding: 4,
     borderRadius: 999,
     borderWidth: 1,
     borderColor: 'rgba(232,225,211,0.14)',
+    backgroundColor: 'rgba(7,8,12,0.75)',
   },
   tab: {
     flex: 1,
@@ -44,16 +98,17 @@ export const galleryScreenStyles = StyleSheet.create({
     color: colors.ink,
   },
   grid: {
-    marginTop: 16,
     paddingHorizontal: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
     columnGap: 12,
     rowGap: 16,
   },
-  worldBackdrop: {
-    ...StyleSheet.absoluteFill,
-    backgroundColor: '#0b0c11',
-    backgroundImage: 'radial-gradient(circle at 50% 45%, rgba(255,255,255,0.05), rgba(7,8,12,0) 70%)',
+  pressed: {
+    opacity: 0.7,
+  },
+  photo: {
+    width: '100%',
+    height: '100%',
   },
 });

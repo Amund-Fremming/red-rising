@@ -43,13 +43,3 @@ export const CITIES: GalleryEntry[] = [
   { name: 'New Sparta', subtitle: 'Earth' },
   { name: 'New Troy', subtitle: 'Ganymede' },
 ];
-
-function normalize(text: string) {
-  return text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
-}
-
-export function matchesQuery(entry: { name: string; subtitle: string }, query: string) {
-  const needle = normalize(query);
-  if (!needle) return true;
-  return normalize(`${entry.name} ${entry.subtitle}`).includes(needle);
-}

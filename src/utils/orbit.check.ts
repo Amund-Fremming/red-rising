@@ -1,6 +1,7 @@
 import { beltRocks, labelGoesLeft, mapPosition } from './orbit';
 import { repeatingLinear } from '../theme';
 import { mapMoonSize, mapScale, PLANETS } from '../data/planets';
+import { matchesQuery } from './search';
 
 function check(condition: boolean, message: string) {
   if (!condition) throw new Error(message);
@@ -36,5 +37,11 @@ PLANETS.forEach((planet) => {
   const outer = planet.mapRadius + reach;
   check(outer < BELT_INNER || inner > BELT_OUTER, `${planet.name} moons cross the belt (${inner.toFixed(0)}-${outer.toFixed(0)})`);
 });
+
+const sevro = { name: 'Sevro au Barca', subtitle: 'Gold, leader of the Howlers' };
+check(matchesQuery(sevro, '  SEVRO '), 'search ignores case and spaces');
+check(matchesQuery(sevro, 'howlers'), 'search matches subtitle');
+check(!matchesQuery(sevro, 'mustang'), 'search rejects non-matches');
+check(matchesQuery({ name: 'Théodora', subtitle: '' }, 'theo'), 'search ignores accents');
 
 console.info('orbit checks passed');
