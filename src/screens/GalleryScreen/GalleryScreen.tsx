@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Animated, Easing, Image, ImageSourcePropType, Pressable, ScrollView, Text, TextInput, TextInputInstance, useWindowDimensions, View } from 'react-native';
+import { Animated, Easing, Image, ImageSourcePropType, Pressable, ScrollView, Text, TextInput, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GalleryCard, ImagePlaceholder } from '../../components/GalleryCard/GalleryCard';
 import { ImageViewer, ViewerImage } from '../../components/ImageViewer/ImageViewer';
@@ -38,7 +38,7 @@ export function GalleryScreen({ onBack }: Props) {
   const [shown, setShown] = useState<ViewerImage | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const searchProgress = useRef(new Animated.Value(0)).current;
-  const searchInput = useRef<TextInputInstance>(null);
+  const searchInput = useRef<TextInput>(null);
 
   const animateSearch = (toValue: number, onDone?: () => void) =>
     Animated.timing(searchProgress, { toValue, duration: SEARCH_ANIMATION_MS, easing: Easing.out(Easing.cubic), useNativeDriver: true }).start(onDone);

@@ -53,5 +53,5 @@ const STARS: Star[] = [
 
 export const starryBackground = {
   backgroundColor: colors.ink,
-  backgroundImage: STARS.map(([x, y, size, color]) => `radial-gradient(${size}px ${size}px at ${x}px ${y}px, ${color}, transparent)`).join(', '),
+  experimental_backgroundImage: STARS.map(([x, y, size, color]) => `radial-gradient(${size}px ${size}px at ${x}px ${y}px, ${color}, transparent)`).join(', '),
 };

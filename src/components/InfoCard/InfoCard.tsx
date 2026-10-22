@@ -12,7 +12,7 @@ type Props = {
 export function InfoCard({ texture, title, body, fact }: Props) {
   return (
     <View style={styles.card}>
-      <View style={[styles.dot, { backgroundImage: shade(texture) }]} />
+      <View style={[styles.dot, { experimental_backgroundImage: shade(texture) }]} />
       <View style={styles.text}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.body}>{body}</Text>

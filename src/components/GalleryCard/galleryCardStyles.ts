@@ -35,7 +35,7 @@ export const galleryCardStyles = StyleSheet.create({
     justifyContent: 'center',
     gap: 6,
     backgroundColor: '#0d0e14',
-    backgroundImage: repeatingLinear(135, [['rgba(232,225,211,0.035)', 0, 10], ['rgba(232,225,211,0)', 10, 20]], 340),
+    experimental_backgroundImage: repeatingLinear(135, [['rgba(232,225,211,0.035)', 0, 10], ['rgba(232,225,211,0)', 10, 20]], 340),
   },
   icon: {
     width: 20,

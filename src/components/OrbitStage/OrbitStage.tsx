@@ -62,7 +62,7 @@ function OrbitingMoon({ moon, position, centerX, labelOpacity }: MoonProps) {
 
   return (
     <View style={[styles.anchor, { left: position.x, top: position.y }]}>
-      <View style={[styles.moon, { left: -half, top: -half, width: moon.size, height: moon.size, borderRadius: half, backgroundImage: shade(moonTexture(moon)) }]} />
+      <View style={[styles.moon, { left: -half, top: -half, width: moon.size, height: moon.size, borderRadius: half, experimental_backgroundImage: shade(moonTexture(moon)) }]} />
       <Animated.View style={[styles.labelSlot, labelSide, { opacity: labelOpacity }]}>
         <Text style={styles.label}>{moon.name}</Text>
       </Animated.View>

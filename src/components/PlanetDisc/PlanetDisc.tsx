@@ -14,7 +14,7 @@ export function PlanetDisc({ texture, size, ringStroke, glow }: Props) {
 
   return (
     <View style={{ width: size, height: size }} pointerEvents="none">
-      <View style={[styles.disc, { borderRadius: size / 2, backgroundImage: shade(texture), boxShadow: glow }]} />
+      <View style={[styles.disc, { borderRadius: size / 2, experimental_backgroundImage: shade(texture), boxShadow: glow }]} />
       {ringStroke !== undefined && (
         <View
           style={[

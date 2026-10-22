@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react';
-import { Animated, HostInstance, Text, useWindowDimensions, View } from 'react-native';
+import { Animated, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { InfoCard } from '../../components/InfoCard/InfoCard';
 import { OrbitStage } from '../../components/OrbitStage/OrbitStage';
@@ -25,7 +25,7 @@ export function PlanetScreen({ index, progress, from, startSize, onStageMeasured
   const insets = useSafeAreaInsets();
   const { width, height } = useWindowDimensions();
   const planet = PLANETS[index];
-  const stageRef = useRef<HostInstance>(null);
+  const stageRef = useRef<View>(null);
   const [stageCenter, setStageCenter] = useState(from);
 
   useLayoutEffect(() => {

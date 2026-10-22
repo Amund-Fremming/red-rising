@@ -25,7 +25,7 @@ export const homeScreenStyles = StyleSheet.create({
   },
   mars: {
     position: 'absolute',
-    backgroundImage: HOME_MARS,
+    experimental_backgroundImage: HOME_MARS,
     boxShadow: '0 0 120px rgba(224,88,60,0.25)',
   },
   phobos: {
@@ -34,7 +34,7 @@ export const homeScreenStyles = StyleSheet.create({
     width: 14,
     height: 14,
     borderRadius: 7,
-    backgroundImage: 'radial-gradient(circle at 35% 30%, #cfc4b6, #6b6157)',
+    experimental_backgroundImage: 'radial-gradient(circle at 35% 30%, #cfc4b6, #6b6157)',
   },
   content: {
     flex: 1,

@@ -31,7 +31,7 @@ export const skyMapScreenStyles = StyleSheet.create({
     width: 200,
     height: 200,
     borderRadius: 100,
-    backgroundImage: 'radial-gradient(circle, #fffaf0 0%, #ffe3a3 30%, #ffad4d 55%, rgba(255,120,40,0.35) 72%, rgba(255,120,40,0) 100%)',
+    experimental_backgroundImage: 'radial-gradient(circle, #fffaf0 0%, #ffe3a3 30%, #ffad4d 55%, rgba(255,120,40,0.35) 72%, rgba(255,120,40,0) 100%)',
     boxShadow: '0 0 80px 30px rgba(255,170,80,0.25)',
   },
   orbit: {
@@ -89,7 +89,7 @@ export const skyMapScreenStyles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundImage: 'radial-gradient(circle at 35% 30%, #cfc8bc, #6d665d)',
+    experimental_backgroundImage: 'radial-gradient(circle at 35% 30%, #cfc8bc, #6d665d)',
   },
   vestaDot: {
     width: 6,
@@ -98,7 +98,7 @@ export const skyMapScreenStyles = StyleSheet.create({
     borderTopRightRadius: 3.3,
     borderBottomRightRadius: 3,
     borderBottomLeftRadius: 3,
-    backgroundImage: 'radial-gradient(circle at 35% 30%, #c2b8a8, #625a50)',
+    experimental_backgroundImage: 'radial-gradient(circle at 35% 30%, #c2b8a8, #625a50)',
   },
   bodyLabel: {
     fontFamily: fonts.italic,
@@ -130,7 +130,7 @@ export const skyMapScreenStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'space-between',
-    backgroundImage: `linear-gradient(180deg, rgba(7,8,12,0) 0%, rgba(7,8,12,0.92) 35%, ${colors.ink} 100%)`,
+    experimental_backgroundImage: `linear-gradient(180deg, rgba(7,8,12,0) 0%, rgba(7,8,12,0.92) 35%, ${colors.ink} 100%)`,
   },
   title: {
     fontFamily: fonts.display,
